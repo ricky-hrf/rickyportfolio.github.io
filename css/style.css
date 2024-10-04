@@ -135,11 +135,34 @@ section{
 .home .home-content h1{
   font-size: 5.6rem;
   font-weight: 700;
-  margin-bottom: .3rem;
+}
+
+.home .home-content .text-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home .home-content .text-wrapper .moving-text {
+  font-size: 3rem;
+  display: inline-block;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: moveText 7s infinite linear;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .home .home-content p{
   font-size: 1.6rem;
+  margin-top: 1rem;
 }
 
 .home .home-content .social-media a{
