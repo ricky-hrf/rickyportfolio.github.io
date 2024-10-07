@@ -72,14 +72,15 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-/*============ dark light mode============*/
+/*============ dark light mode start ============*/
 let darkModeIcon = document.querySelector('#darkMode-icon');
 darkModeIcon.onclick = () => {
   darkModeIcon.classList.toggle('bx-sun');
   document.body.classList.toggle('dark-mode');
 };
+/*============ dark light mode end ============*/
 
-/*============ scroll reveal============*/
+/*============ scroll reveal start ============*/
 ScrollReveal({
   reset: true,
   distance:'80px',
@@ -91,3 +92,111 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .skills-container, .sevices-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+
+/*============ scroll reveal end ============*/
+
+
+/*========== contact setup start ========== */
+
+const form = document.querySelector("form");
+const Name = document.getElementById("name");
+const EmailInput = document.getElementById("email");
+const Phone = document.getElementById("phone");
+const SubjectInput = document.getElementById("Subject");
+const MessageInput = document.getElementById("message");
+
+function showError(input) {
+  const errorText = input.nextElementSibling;
+  if (input.value.trim() === "") {
+    errorText.style.display = "block";
+    input.classList.add("error");
+  } else {
+    errorText.style.display = "none";
+    input.classList.remove("error");
+  }
+}
+
+//fungsi validasi input dari karakter berbahaya(xss protection)
+function sanitizeInput(input){
+  const sanitizedValue = input.value
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+    input.value =sanitizedValue;
+}
+
+//fungsi validasi panjang input
+function validateLength(input, maxLength) {
+  if (input.value.length > maxLength) {
+    input.value = input.value.substring(0, maxLength);
+    alert(`Input terlalu panjang! Maksimal karakter untuk field ini adalah ${maxLength}`);
+  }
+}
+
+// Fungsi untuk validasi form
+function validateForm() {
+  let isValid = true;
+
+  // Cek setiap input, jika kosong jalankan showError
+  sanitizeInput(Name);
+  sanitizeInput(EmailInput);
+  sanitizeInput(Phone);
+  sanitizeInput(SubjectInput);
+  sanitizeInput(MessageInput);
+  showError(Name);
+  showError(EmailInput);
+  showError(Phone);
+  showError(SubjectInput);
+  showError(MessageInput);
+  validateLength(Name, 50);
+  validateLength(EmailInput, 100);
+  validateLength(Phone, 15);
+  validateLength(SubjectInput, 100);
+  validateLength(MessageInput, 500);
+
+  // Jika ada input yang kosong
+  if (Name.value.trim() === "" || EmailInput.value.trim() === "" || Phone.value.trim() === "" ||
+      SubjectInput.value.trim() === "" || MessageInput.value.trim() === "") {
+    isValid = false;
+  }
+  return isValid;
+}
+
+// Fungsi untuk mengirim email melalui EmailJS
+function sendEmail() {
+  const templateParams = {
+    from_name: Name.value,
+    email: EmailInput.value,
+    phone: Phone.value,
+    subject: SubjectInput.value,
+    message: MessageInput.value
+  };
+  emailjs.send('service_a2y6g0i', 'template_lwy60kv', templateParams)
+  .then(function(response) {
+    Swal.fire({
+      icon: 'success',
+      title: 'Pesan Berhasil Dikirim!',
+      text: 'Terima kasih sudah menghubungi Ricky. Tunggu Saya akan segera membalas pesan Anda.Anda adalah Orang Hebat..!',
+      showConfirmButton: true,
+      confirmButtonText: 'OK'
+    }).then(() => {
+      form.reset();
+    });
+  }, function(error) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Pengiriman Gagal!',
+      text: 'Terjadi kesalahan, mohon coba lagi nanti.',
+    });
+  });
+}
+// jalankan tombol submit
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (validateForm()) {
+    sendEmail();
+  }
+});
+
+/*========== contact setup end ========== */

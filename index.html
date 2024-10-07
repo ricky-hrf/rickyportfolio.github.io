@@ -14,6 +14,17 @@
   <!-- box icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<!-- script sdk emailjs -->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+publicKey: "71_9-CTH02Ajq551s",
+});
+})();
+</script>
 <body>
   <!-- header design -->
 
@@ -276,15 +287,30 @@
 
     <form action="#">
       <div class="input-box">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Email Address">
+        <div class="input-field field">
+          <input type="text" placeholder="Your Name" id="name" class="item" autocomplete="off">
+          <div class="error-txt">Name can't be blank</div>
+        </div>
+        <div class="input-field field">
+          <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
+          <div class="error-txt">Email Address can't be blank</div>
+        </div>
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Mobile Number">
-        <input type="text" placeholder="Email Subject">
+        <div class="input-field field">
+          <input type="number" placeholder="Mobile Number" id="phone" class="item" autocomplete="off">
+          <div class="error-txt">Mobile Number can't be blank</div>
+        </div>
+        <div class="input-field field">
+          <input type="text" placeholder="Subject" id="Subject" class="item" autocomplete="off">
+          <div class="error-txt">Subject can't be blank</div>
+        </div>
       </div>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-      <input type="submit" value="Send Message" class="btn">
+      <div class="textarea-field field">
+        <textarea name="" id="message" class="item" autocomplete="off" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <div class="error-txt">Message can't be blank</div>
+      </div>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
@@ -361,6 +387,9 @@
   </footer>
 
   <!-- footer end -->
+
+  <!-- sweetalert custom  -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- scroll reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
