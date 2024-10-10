@@ -172,22 +172,24 @@ function sendEmail() {
     subject: SubjectInput.value,
     message: MessageInput.value
   };
-  emailjs.send('service_a2y6g0i', 'template_lwy60kv', templateParams)
+  emailjs
+  .send('service_a2y6g0i', 'template_lwy60kv', templateParams)
   .then(function(response) {
     Swal.fire({
       icon: 'success',
       title: 'Pesan Berhasil Dikirim!',
-      text: 'Terima kasih sudah menghubungi Ricky. Tunggu Saya akan segera membalas pesan Anda.Anda adalah Orang Hebat..!',
+      text: 'Terima kasih sudah menghubungi Ricky. Tunggu Saya akan segera membalasnya. Anda sungguh luar biasa..!',
       showConfirmButton: true,
       confirmButtonText: 'OK'
     }).then(() => {
       form.reset();
     });
-  }, function(error) {
+  })
+  .catch(function(error) {
     Swal.fire({
       icon: 'error',
       title: 'Pengiriman Gagal!',
-      text: 'Terjadi kesalahan, mohon coba lagi nanti.',
+      text: 'Ada masalah, mohon coba lagi nanti. Terimakasih',
     });
   });
 }
