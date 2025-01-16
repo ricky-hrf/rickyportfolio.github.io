@@ -1,402 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website</title>
-  <!-- swiper css -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-  <!-- css custom -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- box icons -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<!-- script sdk emailjs -->
-<script type="text/javascript"
-src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <!-- swiper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- css custom -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+      rel='stylesheet'>
+  </head>
+  <!-- script sdk emailjs -->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
-<script type="text/javascript">
+  <script type="text/javascript">
 (function(){
 emailjs.init({
 publicKey: "71_9-CTH02Ajq551s",
 });
 })();
 </script>
-<body>
-  <!-- header design -->
+  <body>
+    <!-- header design -->
 
-  <header class="header" id="header">
-    <a href="#" class="logo">Portfolio.</a>
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Project</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <header class="header" id="header">
+      <a href="#" class="logo">Portfolio.</a>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Project</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <div class="bx bx-moon" id="darkMode-icon"></div>
-    <i class='bx bx-menu' id="menu-icon"></i>
-  </header>
+      <div class="bx bx-moon" id="darkMode-icon"></div>
+      <i class='bx bx-menu' id="menu-icon"></i>
+    </header>
 
-  <!-- home section design -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <h3>Hello, I am</h3>
-      <h1>Ricky Harefa</h1>
-      <div class="text-wrapper">
-        <div class="moving-text">I am a junior front-end web developer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <div class="moving-text">I am a junior front-end web developer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <!-- home section design -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, I am</h3>
+        <h1>Ricky Harefa</h1>
+        <div class="text-wrapper">
+          <div class="moving-text">I am a junior front-end web
+            developer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+          <div class="moving-text">I am a junior front-end web
+            developer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+        <p>Saya berusaha menjadi front-end web developer profesional, terus
+          belajar dan mencari tahu inovasi web terbaru</p>
+        <div class="social-media">
+          <a href="#"><i class=' bx bxl-facebook'></i></a>
+          <a
+            href="https://wa.me/6282294985034?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20jasa%20Anda%21%20Apakah%20Anda%20bersedia%3F"
+            target="_blank"><i class='bx bxl-whatsapp'></i></a>
+          <a href="https://www.instagram.com/rickyom_" target="_blank"><i
+              class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <a
+          href="https://drive.google.com/file/d/12qug1tFhxFP94fNo2G2gVyyt5G6DWvK8/preview?usp=sharing"
+          target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
       </div>
-      <p>Saya berusaha menjadi front-end  web developer profesional, terus belajar dan mencari tahu inovasi web terbaru</p>
-      <div class="social-media">
-        <a href="#"><i class=' bx bxl-facebook' ></i></a>
-        <a href="https://wa.me/6282294985034?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20jasa%20Anda%21%20Apakah%20Anda%20bersedia%3F" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
-        <a href="https://www.instagram.com/rickyom_" target="_blank"><i class='bx bxl-instagram' ></i></a>
-        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+
+      <div class="profession-container">
+        <div class="profession-box">
+          <div class="profession" style="--i:0;">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Developer</h3>
+          </div>
+          <div class="profession" style="--i:1;">
+            <i class='bx bx-line-chart'></i>
+            <h3>Data Analyst</h3>
+          </div>
+          <div class="profession" style="--i:2;">|
+            <i class='bx bx-camera'></i>
+            <h3>Photographer</h3>
+          </div>
+          <div class="profession" style="--i:3;">
+            <i class='bx bxs-book-alt'></i>
+            <h3>Freelancer</h3>
+          </div>
+          <div class="circle"></div>
+        </div>
+        <div class="overlay"></div>
       </div>
-      <a href="https://drive.google.com/file/d/12qug1tFhxFP94fNo2G2gVyyt5G6DWvK8/preview?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
+      <div class="home-img">
+        <img src="images/Programming-bro.png" alt>
+      </div>
+    </section>
+
+    <!-- about section start -->
+
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="images/home-image-profile.png" alt>
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Saya seorang junior front-end web developer dengan minat yang besar
+          dalam menciptakan pengalaman pengguna yang interaktif dan
+          menyenangkan. Saya menguasai HTML, CSS, bootstrap, JavaScript,
+          reactJs, php, dan laravel serta selalu bersemangat untuk belajar hal
+          baru tentang dunia website</p>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- skills start -->
+
+    <div class="skills" id="skills">
+      <h2 class="heading">My <span>Skills</span></h2>
+
+      <div class="skills-container">
+        <a href="https://www.w3schools.com/html/" target="_blank">
+          <div class="skills-box">
+            <img src="images/html-icon.png" alt>
+            <h3>HTML</h3>
+            <p>Kemampuan dalam menulis kode HTML yang bersih dan terstruktur</p>
+          </div>
+        </a>
+        <a href="https://www.w3schools.com/css/" target="_blank">
+          <div class="skills-box">
+            <img src="images/css-icon.png" alt>
+            <h3>CSS</h3>
+            <p>Kemampuan yang baik dalam mendesain tampilan yang menarik dan
+              responsif menggunakan CSS.</p>
+          </div>
+        </a>
+        <a href="https://www.javascript.com/" target="_blank">
+          <div class="skills-box">
+            <img src="images/js-icon.png" alt>
+            <h3>JavaScript</h3>
+            <p>Kemampuan membuat interaktivitas pada halaman web menggunakan
+              JavaScript murni.</p>
+          </div>
+        </a>
+        <a
+          href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
+          target="_blank">
+          <div class="skills-box">
+            <img src="images/bootstrap.png" alt>
+            <h3>Bootstrap</h3>
+            <p>Memilik kemampuan menggunakan <em>Bootstrap</em> untuk
+              mempercepat pengembangan proyek web.</p>
+          </div>
+        </a>
+        <a href="https://react.dev/learn" target="_blank">
+          <div class="skills-box">
+            <img src="images/react.png" alt>
+            <h3>ReactJS</h3>
+            <p>Memiliki kemampuan dalam membuat aplikasi responsif dengan
+              React</p>
+          </div>
+        </a>
+        <a href="https://www.php.net/" target="_blank">
+          <div class="skills-box">
+            <img src="images/php.png" alt>
+            <h3>php</h3>
+            <p>Memiliki kemampuan dalam membuat halaman web dinamis menggunakan
+              PHP untuk menampilkan data dari database.</p>
+          </div>
+        </a>
+        <a href="https://laravel.com/" target="_blank">
+          <div class="skills-box">
+            <img src="images/laravel.png" alt>
+            <h3>Laravel</h3>
+            <p>Memiliki kemampuan menggunakan Laravel untuk membangun aplikasi
+              web yang kompleks dan terstruktur.</p>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <div class="profession-container">
-      <div class="profession-box">
-        <div class="profession" style="--i:0;">
+    <!-- skills sction end -->
+
+    <!-- service section start -->
+
+    <section class="services" id="services">
+      <h2 class="heading">My <span>Services</span></h2>
+
+      <div class="services-container">
+        <div class="services-box">
           <i class='bx bx-code-alt'></i>
-          <h3>Web Developer</h3>
+          <h3>We Development</h3>
+          <p>Siap memiliki website yang menarik dan fungsional? Kami hadir untuk
+            membantu Anda menciptakan website profesional yang tidak hanya
+            tampil hebat, tetapi juga meningkatkan bisnis Anda! Ayo, bangun
+            website impian Anda bersama kami!</p>
         </div>
-        <div class="profession" style="--i:1;">
-          <i class='bx bx-line-chart'></i>
-          <h3>Data Analyst</h3>
+        <div class="services-box">
+          <i class='bx bxs-paint'></i>
+          <h3>Graphic Design</h3>
+          <p>Ingin brand Anda tampil beda dan menarik perhatian? Percayakan
+            kepada kami untuk menciptakan desain grafis yang kreatif dan
+            memukau, yang akan membawa identitas brand Anda ke tingkat
+            berikutnya. Mari wujudkan ide-ide kreatif Anda!</p>
         </div>
-        <div class="profession" style="--i:2;">|
-          <i class='bx bx-camera' ></i>
-          <h3>Photographer</h3>
-        </div>
-        <div class="profession" style="--i:3;">
-          <i class='bx bxs-book-alt'></i>
-          <h3>Freelancer</h3>
-        </div>
-        <div class="circle"></div>
-      </div>
-    <div class="overlay"></div>
-    </div>
-    <div class="home-img">
-      <img src="images/Programming-bro.png" alt="">
-    </div>
-  </section>
-
-  <!-- about section start -->
-
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="images/home-image-profile.png" alt="">
-    </div>
-    <div class="about-content">
-      <h2 class="heading">About <span>Me</span></h2>
-      <h3>Saya seorang junior front-end web developer dengan minat yang besar dalam menciptakan pengalaman pengguna yang interaktif dan menyenangkan. Saya menguasai HTML, CSS, bootstrap, JavaScript, reactJs, php, dan laravel serta selalu bersemangat untuk belajar hal baru tentang dunia website</p>
-    </div>
-  </section>
-  <!-- about section end -->
-
-  <!-- skills start -->
-
-  <div class="skills" id="skills">
-    <h2 class="heading">My <span>Skills</span></h2>
-
-    <div class="skills-container">
-      <a href="https://www.w3schools.com/html/" target="_blank">
-      <div class="skills-box">
-        <img src="images/html-icon.png" alt="">
-        <h3>HTML</h3>
-        <p>Kemampuan dalam menulis kode HTML yang bersih dan terstruktur</p>
-      </div>
-    </a>
-    <a href="https://www.w3schools.com/css/" target="_blank">
-      <div class="skills-box">
-        <img src="images/css-icon.png" alt="">
-        <h3>CSS</h3>
-        <p>Kemampuan yang baik dalam mendesain tampilan yang menarik dan responsif menggunakan CSS.</p>
-      </div>
-    </a>
-    <a href="https://www.javascript.com/" target="_blank">
-      <div class="skills-box">
-        <img src="images/js-icon.png" alt="">
-        <h3>JavaScript</h3>
-        <p>Kemampuan membuat interaktivitas pada halaman web menggunakan JavaScript murni.</p>
-      </div>
-    </a>
-    <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">
-      <div class="skills-box">
-        <img src="images/bootstrap.png" alt="">
-        <h3>Bootstrap</h3>
-        <p>Memilik kemampuan menggunakan <em>Bootstrap</em> untuk mempercepat pengembangan proyek web.</p>
-      </div>
-    </a>
-    <a href="https://react.dev/learn" target="_blank">
-      <div class="skills-box">
-        <img src="images/react.png" alt="">
-        <h3>ReactJS</h3>
-        <p>Memiliki kemampuan dalam membuat aplikasi responsif dengan React</p>
-      </div>
-    </a>
-    <a href="https://www.php.net/" target="_blank">
-      <div class="skills-box">
-        <img src="images/php.png" alt="">
-        <h3>php</h3>
-        <p>Memiliki kemampuan dalam membuat halaman web dinamis menggunakan PHP untuk menampilkan data dari database.</p>
-      </div>
-    </a>
-    <a href="https://laravel.com/" target="_blank">
-      <div class="skills-box">
-        <img src="images/laravel.png" alt="">
-        <h3>Laravel</h3>
-        <p>Memiliki kemampuan menggunakan Laravel untuk membangun aplikasi web yang kompleks dan terstruktur.</p>
-      </div>
-    </a>
-    </div>
-  </div>
-
-  <!-- skills sction end -->
-  
-  <!-- service section start -->
-
-  <section class="services" id="services">
-    <h2 class="heading">My <span>Services</span></h2>
-    
-    <div class="services-container">
-      <div class="services-box">
-        <i class='bx bx-code-alt'></i>
-        <h3>We Development</h3>
-        <p>Siap memiliki website yang menarik dan fungsional? Kami hadir untuk membantu Anda menciptakan website profesional yang tidak hanya tampil hebat, tetapi juga meningkatkan bisnis Anda! Ayo, bangun website impian Anda bersama kami!</p>
-      </div>
-      <div class="services-box">
-        <i class='bx bxs-paint'></i>
-        <h3>Graphic Design</h3>
-        <p>Ingin brand Anda tampil beda dan menarik perhatian? Percayakan kepada kami untuk menciptakan desain grafis yang kreatif dan memukau, yang akan membawa identitas brand Anda ke tingkat berikutnya. Mari wujudkan ide-ide kreatif Anda!</p>
-      </div>
-      <div class="services-box">
-        <i class='bx bx-bar-chart'></i>
-        <h3>Digital Marketing</h3>
-        <p>Raih lebih banyak pelanggan dan tingkatkan penjualan dengan strategi digital marketing kami! Kami siap mengoptimalkan kehadiran online Anda dan menjangkau audiens lebih luas. Hubungi kami sekarang untuk mulai mendominasi dunia digital!</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- service section end -->
-
-  <!-- portofolio section start -->
-
-  <section class="portfolio" id="portfolio">
-    <h2 class="heading">Latest <span>Project</span></h2>
-
-    <div class="portfolio-container">
-      <div class="portfolio-box">
-        <img src="images/project1.png" alt="">
-        <div class="portfolio-layer">
-          <h4>Quiz App</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iste molestiae ipsum!</p>
-          <a href="/project01/index.html"><i class='bx bx-link-external' ></i></a>
+        <div class="services-box">
+          <i class='bx bx-bar-chart'></i>
+          <h3>Digital Marketing</h3>
+          <p>Raih lebih banyak pelanggan dan tingkatkan penjualan dengan
+            strategi digital marketing kami! Kami siap mengoptimalkan kehadiran
+            online Anda dan menjangkau audiens lebih luas. Hubungi kami sekarang
+            untuk mulai mendominasi dunia digital!</p>
         </div>
       </div>
-      <div class="portfolio-box">
-        <img src="images/project2.png" alt="">
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iste molestiae ipsum!</p>
-          <a href="#"><i class='bx bx-link-external' ></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="images/project3.png" alt="">
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iste molestiae ipsum!</p>
-          <a href="#"><i class='bx bx-link-external' ></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="images/project4.png" alt="">
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iste molestiae ipsum!</p>
-          <a href="#"><i class='bx bx-link-external' ></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="images/project5.png" alt="">
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iste molestiae ipsum!</p>
-          <a href="#"><i class='bx bx-link-external' ></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="images/project6.png" alt="">
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iste molestiae ipsum!</p>
-          <a href="#"><i class='bx bx-link-external' ></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- portofolio section end -->
+    <!-- service section end -->
 
-  <!-- testimonial start -->
+    <!-- portofolio section start -->
 
-  <div class="testimonial-container">
-    <h2 class="heading">Valuable <span>Testimonial</span></h2>
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Latest <span>Project</span></h2>
 
-    <div class="testimonial-wrapper">
-      <div class="testimonial-box mySwiper">
-        <div class="testimonial-content swiper-wrapper">
-          <div class="testimonial-slide swiper-slide">
-            <img src="images/baby.jpg" alt="">
-            <h3>Baby Boy 01</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit amet deserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores.</p>
-          </div>
-          <div class="testimonial-slide swiper-slide">
-            <img src="images/baby2.png" alt="">
-            <h3>Baby Boy 02</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit amet deserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores.</p>
-          </div>
-          <div class="testimonial-slide swiper-slide">
-            <img src="images/baby3.png" alt="">
-            <h3>Baby Boy 03</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit amet deserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores.</p>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="images/project1.png" alt>
+          <div class="portfolio-layer">
+            <h4>Quiz App</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              iste molestiae ipsum!</p>
+            <a href="/project01/index.html"><i
+                class='bx bx-link-external'></i></a>
           </div>
         </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- testimonial end -->
-
-  <!-- contact section start -->
-
-  <section class="contact" id="contact">
-    <h2 class="heading">My <span>Contact</span></h2>
-
-    <form action="#">
-      <div class="input-box">
-        <div class="input-field field">
-          <input type="text" id="name" placeholder="Nama" class="item" autocomplete="off">
-          <div class="error-txt">Nama tidak boleh kosong ya,,</div>
-        </div>
-        <div class="input-field field">
-          <input type="email" placeholder="Email" id="email" class="item" autocomplete="off">
-          <div class="error-txt">Email tidak boleh kosong ya,,</div>
-        </div>
-      </div>
-      <div class="input-box">
-        <div class="input-field field">
-          <input type="number" id="phone" class="item" placeholder="No. Hp/WA" autocomplete="off">
-          <div class="error-txt">Tuliskan nomor Hp ya,,,</div>
-        </div>
-        <div class="input-field field">
-          <input type="text" id="Subject" placeholder="Subject" class="item" autocomplete="off">
-          <div class="error-txt">Subject tidak boleh kosong ya,,</div>
-        </div>
-      </div>
-      <div class="textarea-field field">
-        <textarea name="" id="message" placeholder="Tuliskan pesan Anda" class="item" autocomplete="off" cols="15" rows="5"></textarea>
-        <div class="error-txt">Mohon tuliskan Pesan kepada Ricky!</div>
-      </div>
-      <button type="submit">Kirim Pesan</button>
-    </form>
-  </section>
-
-  <!-- contact section end -->
-
-  <!-- blogs design start -->
-
-  <section class="blogs" id="blogs">
-    <h2 class="heading">Blogs <span>News</span></h2>
-    <div class="blogs-container">
-      <div class="blog">
-        <div class="image">
-          <img src="images/news.png" alt="">
-          <div class="flex">
-            <span>by admin</span>
-            <span>jan 01, 2024</span>
+        <div class="portfolio-box">
+          <img src="images/project2.png" alt>
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              iste molestiae ipsum!</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
-        <div class="content">
-          <h3><a href="#">blog content title 01</a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ratione veniam placeat facilis ex eligendi facere accusantium quos nobis sapiente.</p>
-          <a href="#" class="btn">read more</a>
-        </div>
-      </div>
-      <div class="blog">
-        <div class="image">
-          <img src="images/news2.png" alt="">
-          <div class="flex">
-            <span>by admin</span>
-            <span>jan 05, 2024</span>
+        <div class="portfolio-box">
+          <img src="images/project3.png" alt>
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              iste molestiae ipsum!</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
-        <div class="content">
-          <h3><a href="#">blog content title 02</a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ratione veniam placeat facilis ex eligendi facere accusantium quos nobis sapiente.</p>
-          <a href="#" class="btn">read more</a>
-        </div>
-      </div>
-      <div class="blog">
-        <div class="image">
-          <img src="images/news3.png" alt="">
-          <div class="flex">
-            <span>by admin</span>
-            <span>jan 11, 2024</span>
+        <div class="portfolio-box">
+          <img src="images/project4.png" alt>
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              iste molestiae ipsum!</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
           </div>
         </div>
-        <div class="content">
-          <h3><a href="#">blog content title 03</a></h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ratione veniam placeat facilis ex eligendi facere accusantium quos nobis sapiente.</p>
-          <a href="#" class="btn">read more</a>
+        <div class="portfolio-box">
+          <img src="images/project5.png" alt>
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              iste molestiae ipsum!</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="images/project6.png" alt>
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              iste molestiae ipsum!</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portofolio section end -->
+
+    <!-- testimonial start -->
+
+    <div class="testimonial-container">
+      <h2 class="heading">Valuable <span>Testimonial</span></h2>
+
+      <div class="testimonial-wrapper">
+        <div class="testimonial-box mySwiper">
+          <div class="testimonial-content swiper-wrapper">
+            <div class="testimonial-slide swiper-slide">
+              <img src="images/baby.jpg" alt>
+              <h3>Baby Boy 01</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                ducimus illo sapiente eos. Impedit quisquam, quasi velit amet
+                deserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut
+                earum, iure distinctio velit doloremque ratione facilis soluta
+                unde voluptas. Amet maiores natus architecto facere, molestias
+                repellat quibusdam iusto, inventore fugiat dolorem dicta
+                mollitia vel incidunt est officiis distinctio voluptate
+                excepturi, quaerat dolores.</p>
+            </div>
+            <div class="testimonial-slide swiper-slide">
+              <img src="images/baby2.png" alt>
+              <h3>Baby Boy 02</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                ducimus illo sapiente eos. Impedit quisquam, quasi velit amet
+                deserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut
+                earum, iure distinctio velit doloremque ratione facilis soluta
+                unde voluptas. Amet maiores natus architecto facere, molestias
+                repellat quibusdam iusto, inventore fugiat dolorem dicta
+                mollitia vel incidunt est officiis distinctio voluptate
+                excepturi, quaerat dolores.</p>
+            </div>
+            <div class="testimonial-slide swiper-slide">
+              <img src="images/baby3.png" alt>
+              <h3>Baby Boy 03</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                ducimus illo sapiente eos. Impedit quisquam, quasi velit amet
+                deserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut
+                earum, iure distinctio velit doloremque ratione facilis soluta
+                unde voluptas. Amet maiores natus architecto facere, molestias
+                repellat quibusdam iusto, inventore fugiat dolorem dicta
+                mollitia vel incidunt est officiis distinctio voluptate
+                excepturi, quaerat dolores.</p>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
 
-  </section>
+    <!-- testimonial end -->
 
-  <!-- blogs design end -->
+    <!-- contact section start -->
 
-  <!-- footer start -->
+    <section class="contact" id="contact">
+      <h2 class="heading">My <span>Contact</span></h2>
 
-  <footer class="footer">
-    <div class="footer-text">
-      <p>Copyright &copy; 2024 by <a href="#about">Ricky Harefa</a> | All Rights Reserved</p>
-    </div>
+      <form action="#">
+        <div class="input-box">
+          <div class="input-field field">
+            <input type="text" id="name" placeholder="Nama" class="item"
+              autocomplete="off">
+            <div class="error-txt">Nama tidak boleh kosong ya,,</div>
+          </div>
+          <div class="input-field field">
+            <input type="email" placeholder="Email" id="email" class="item"
+              autocomplete="off">
+            <div class="error-txt">Email tidak boleh kosong ya,,</div>
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="input-field field">
+            <input type="number" id="phone" class="item" placeholder="No. Hp/WA"
+              autocomplete="off">
+            <div class="error-txt">Tuliskan nomor Hp ya,,,</div>
+          </div>
+          <div class="input-field field">
+            <input type="text" id="Subject" placeholder="Subject" class="item"
+              autocomplete="off">
+            <div class="error-txt">Subject tidak boleh kosong ya,,</div>
+          </div>
+        </div>
+        <div class="textarea-field field">
+          <textarea name id="message" placeholder="Tuliskan pesan Anda"
+            class="item" autocomplete="off" cols="15" rows="5"></textarea>
+          <div class="error-txt">Mohon tuliskan Pesan kepada Ricky!</div>
+        </div>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </section>
 
-    <div class="social-media">
-      <a href="https://www.youtube.com/@rickyharefa1154" target="_blank"><i class='bx bxl-youtube'></i></a>
-      <a href="https://github.com/ricky-hrf" target="_blank"><i class='bx bxl-github' ></i></a>
-    </div>
+    <!-- contact section end -->
 
-    <div class="footer-iconTop">
-      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-    </div>
-  </footer>
+    <!-- blogs design start -->
 
-  <!-- footer end -->
+    <section class="blogs" id="blogs">
+      <h2 class="heading">Blogs <span>News</span></h2>
+      <div class="blogs-container">
+        <div class="blog">
+          <div class="image">
+            <img src="images/news.png" alt>
+            <div class="flex">
+              <span>by admin</span>
+              <span>jan 01, 2024</span>
+            </div>
+          </div>
+          <div class="content">
+            <h3><a href="#">blog content title 01</a></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur ratione veniam placeat facilis ex eligendi facere
+              accusantium quos nobis sapiente.</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+        </div>
+        <div class="blog">
+          <div class="image">
+            <img src="images/news2.png" alt>
+            <div class="flex">
+              <span>by admin</span>
+              <span>jan 05, 2024</span>
+            </div>
+          </div>
+          <div class="content">
+            <h3><a href="#">blog content title 02</a></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur ratione veniam placeat facilis ex eligendi facere
+              accusantium quos nobis sapiente.</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+        </div>
+        <div class="blog">
+          <div class="image">
+            <img src="images/news3.png" alt>
+            <div class="flex">
+              <span>by admin</span>
+              <span>jan 11, 2024</span>
+            </div>
+          </div>
+          <div class="content">
+            <h3><a href="#">blog content title 03</a></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur ratione veniam placeat facilis ex eligendi facere
+              accusantium quos nobis sapiente.</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+        </div>
+      </div>
 
-  <!-- sweetalert custom  -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </section>
 
-  <!-- scroll reveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- blogs design end -->
 
-  <!-- swiper js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- footer start -->
 
-  <!-- custom js -->
-  <script src="js/script.js"></script>
-</body>
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2025 by <a href="#about">Ricky Harefa</a> | All
+          Rights Reserved</p>
+      </div>
+
+      <div class="social-media">
+        <a href="https://www.youtube.com/@rickyharefa1154" target="_blank"><i
+            class='bx bxl-youtube'></i></a>
+        <a href="https://github.com/ricky-hrf" target="_blank"><i
+            class='bx bxl-github'></i></a>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <!-- sweetalert custom  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- swiper js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
