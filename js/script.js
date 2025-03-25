@@ -202,3 +202,18 @@ form.addEventListener("submit", (e) => {
 });
 
 /*========== contact setup end ========== */
+
+function checkAnswer(button, answer) {
+            const correctAnswer = 'object';
+            const feedback = document.getElementById('feedback');
+
+            if (answer === correctAnswer) {
+                feedback.textContent = 'Jawaban benar!';
+                feedback.classList.add('text-green-600');
+                feedback.classList.remove('text-red-600');
+            } else {
+                feedback.textContent = 'Jawaban salah, coba lagi!';
+                feedback.classList.add('text-red-600');
+                feedback.classList.remove('text-green-600');
+            }
+        }
