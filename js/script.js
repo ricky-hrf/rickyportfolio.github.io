@@ -217,3 +217,142 @@ function checkAnswer(button, answer) {
                 feedback.classList.remove('text-green-600');
             }
         }
+let portfolio = [
+  {
+    "gambar": "images/project1.png",
+    "nama": "Quiz App",
+    "description": "Aplikasi quis sederhana",
+    "link": "project01/index.html"
+  },
+  {
+    "gambar": "images/project2.png",
+    "nama": "Design Web",
+    "description": "Aplikasi quis sederhana",
+    "link":"#"
+  },
+  {
+    "gambar": "images/project3.png",
+    "nama": "lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet.",
+    "link":"#"
+  },
+  {
+    "gambar": "images/project4.png",
+    "nama": "lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet.",
+    "link":"#"
+  },
+  {
+    "gambar": "images/project5.png",
+    "nama": "Lorem ipsum ",
+    "description": "Lorem ipsum dolor sit amet.",
+    "link":"#"
+  },
+  {
+    "gambar": "images/project6.png",
+    "nama": "Lorem ipsum ",
+    "description": "Lorem ipsum dolor sit amet.",
+    "link":"#"
+  }
+];
+
+let mySkills = [
+  {
+    "gambar": "images/html-icon.png",
+    "skill": "HTML",
+    "desc": "Kemampuan dalam menulis kode HTML yang bersih dan terstruktur"
+  },
+  {
+    "gambar": "images/css-icon.png",
+    "skill": "CSS",
+    "desc": "Kemampuan yang baik dalam mendesain tampilan yang menarik dan responsif menggunakan CSS."
+  },
+  {
+    "gambar": "images/js-icon.png",
+    "skill": "JavaScript",
+    "desc": "Kemampuan membuat interaktivitas pada halaman web menggunakan JavaScript murni."
+  },
+  {
+    "gambar": "images/react.png",
+    "skill": "ReactJs",
+    "desc": "Memiliki kemampuan dalam membuat aplikasi responsif dengan ReactJs"
+  },
+  {
+    "gambar": "images/logos_Express.js.png",
+    "skill": "expressJs",
+    "desc": "Mampu membangun RESTful API dan backend aplikasi menggunakan expressJs"
+  },
+  {
+    "gambar": "images/php.png",
+    "skill": "PHP",
+    "desc": "Memiliki kemampuan dalam membuat halaman web dinamis menggunakan PHP."
+  },
+  {
+    "gambar": "images/laravel.png",
+    "skill": "Laravel",
+    "desc": "Memiliki kemampuan menggunakan Laravel untuk membangun aplikasi web yang kompleks dan terstruktur."
+  },
+  {
+    "gambar": "images/python-logo.png",
+    "skill": "Python",
+    "desc": "Memiliki kemampuan dalam membuat program sederhana dan menengah menggunakan Python"
+  }
+];
+
+let portfolioContainer = document.getElementById("portfolioContainer");
+
+portfolio.forEach(porto => {
+  let portofolioBox = document.createElement("div");
+  portofolioBox.className = "portfolioBox";
+  portfolioContainer.appendChild(portofolioBox);
+  let image = document.createElement("img");
+  image.src = porto["gambar"];
+  image.alt = porto["nama"];
+  portofolioBox.appendChild(image);
+  let portfolioLayer = document.createElement("div");
+  portfolioLayer.className = "portfoliolayer";
+  portofolioBox.appendChild(portfolioLayer);
+  let judul = document.createElement("h4")
+  judul.innerHTML = porto["nama"];
+  portfolioLayer.appendChild(judul);
+  let deskripsi = document.createElement("p");
+  deskripsi.innerHTML = porto["description"];
+  portfolioLayer.appendChild(deskripsi);
+  let newDiv = document.createElement("div");
+  let divBaru = document.createElement("div");
+  let anchor = document.createElement("a");
+  anchor.href = porto["link"];
+  anchor.title = porto["nama"];
+  divBaru.appendChild(anchor);
+  let icon = document.createElement("i");
+  icon.className = "bx bx-link-external";
+  anchor.appendChild(icon);
+  newDiv.appendChild(divBaru);
+  portfolioLayer.appendChild(newDiv);
+});
+
+let skills = document.getElementById("skills");
+
+mySkills.forEach(ms => {
+  let divPertama = document.createElement("div");
+  divPertama.className = "p-0 flex flex-wrap group bg-white rounded-xl hover:shadow-lg transition-shadow duration-300 relative";
+  skills.appendChild(divPertama);
+  let anakDivPertama = document.createElement("div");
+  anakDivPertama.className = "p-4 flex w-full justify-center mb-4 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer position-absolute";
+  divPertama.appendChild(anakDivPertama);
+  let image = document.createElement("img");
+  image.src = ms["gambar"];
+  image.alt = `Icon ${ms["skill"]}`;
+  anakDivPertama.appendChild(image);
+  let anakDivKedua = document.createElement("div");
+  anakDivKedua.className = "flex w-full flex-col items-center justify-center min-h-64 bg-slate-800 p-2 rounded-b-lg text-center mt-auto [clip-path:polygon(50%_0%,_100%_35%,_100%_100%,_0%_100%,_0%_35%)]";
+  let namaSkill = document.createElement("span");
+  namaSkill.className = "text-3xl font-[Poppins] font-semibold text-gray-100 text-center mb-2";
+  namaSkill.innerHTML = ms["skill"];
+  anakDivKedua.appendChild(namaSkill)
+  let deskripsi = document.createElement("p");
+  deskripsi.className = "text-2xl font-[Poppins] text-gray-100";
+  deskripsi.innerHTML = ms["desc"];
+  anakDivKedua.appendChild(deskripsi);
+  divPertama.appendChild(anakDivKedua);
+});
