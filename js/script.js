@@ -356,3 +356,26 @@ mySkills.forEach(ms => {
   anakDivKedua.appendChild(deskripsi);
   divPertama.appendChild(anakDivKedua);
 });
+
+import { ambilData } from "./scriptServices.js";
+document.addEventListener("DOMContentLoaded", function () {
+  const servicesContainer = document.getElementById("servicesContainer");
+  
+  ambilData(function (data) {
+    data.forEach(item => {
+      const servicesBox = document.createElement("div");
+      servicesBox.className = "services-box";
+      const icon = document.createElement("i");
+      icon.className = item['icon'];
+      servicesBox.appendChild(icon);
+      const service = document.createElement("h3");
+      service.textContent = item["service"];
+      servicesBox.appendChild(service);
+      const p = document.createElement("p");
+      p.textContent = item["desc"];
+      servicesBox.appendChild(p);
+      servicesContainer.appendChild(servicesBox);
+    });
+  });
+  
+})
