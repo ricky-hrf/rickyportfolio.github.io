@@ -97,9 +97,9 @@ function checkAnswer(button, answer) {
 let portfolio = [
   {
     "gambar": "images/project1.png",
-    "nama": "Quiz App",
-    "description": "Aplikasi quis sederhana",
-    "link": "project01/index.html"
+    "nama": "rcCoffeeshop",
+    "description": "Website CoffeeShop sederhana",
+    "link": "https://ricky-hrf.github.io/rcCoffeeshop.io/"
   },
   {
     "gambar": "images/project2.png",
