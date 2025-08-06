@@ -928,7 +928,7 @@ span{
   }
 
   .skills .skills-container,
-  .portfolio .portfolio-container{
+  .portfolio .portfolioContainer{
     grid-template-columns: repeat(2, 1fr);
   }
   .testimonial-container .testimonial-wrapper{
@@ -945,7 +945,7 @@ span{
 
 @media (max-width: 617px){
   .skills .skills-container,
-  .portfolio .portfolio-container{
+  .portfolio .portfolioContainer{
     grid-template-columns: 1fr;
   }
 }
