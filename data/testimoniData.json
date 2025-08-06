@@ -1,0 +1,17 @@
+[
+  {
+    "gambar":"images/baby.jpg",
+    "name": "Baby Boy 02",
+    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+  },
+  {
+    "gambar":"images/baby2.png",
+    "name": "Suka pertama",
+    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+  },
+  {
+    "gambar":"images/baby3.png",
+    "name": "Baby Boy 01",
+    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+  }
+]

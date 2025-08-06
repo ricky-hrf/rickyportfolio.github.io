@@ -80,129 +80,6 @@ darkModeIcon.onclick = () => {
 };
 /*============ dark light mode end ============*/
 
-/*============ scroll reveal start ============*/
-ScrollReveal({
-  reset: true,
-  distance:'80px',
-  duration:2000,
-  delay:200
-});
-
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img img, .skills-container, .sevices-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
-
-/*============ scroll reveal end ============*/
-
-
-/*========== contact setup start ========== */
-
-const form = document.querySelector("form");
-const Name = document.getElementById("name");
-const EmailInput = document.getElementById("email");
-const Phone = document.getElementById("phone");
-const SubjectInput = document.getElementById("Subject");
-const MessageInput = document.getElementById("message");
-
-function showError(input) {
-  const errorText = input.nextElementSibling;
-  if (input.value.trim() === "") {
-    errorText.style.display = "block";
-    input.classList.add("error");
-  } else {
-    errorText.style.display = "none";
-    input.classList.remove("error");
-  }
-}
-
-//fungsi validasi input dari karakter berbahaya(xss protection)
-function sanitizeInput(input){
-  const sanitizedValue = input.value
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-    input.value =sanitizedValue;
-}
-
-//fungsi validasi panjang input
-function validateLength(input, maxLength) {
-  if (input.value.length > maxLength) {
-    input.value = input.value.substring(0, maxLength);
-    alert(`Input terlalu panjang! Maksimal karakter untuk field ini adalah ${maxLength}`);
-  }
-}
-
-// Fungsi untuk validasi form
-function validateForm() {
-  let isValid = true;
-
-  // Cek setiap input, jika kosong jalankan showError
-  sanitizeInput(Name);
-  sanitizeInput(EmailInput);
-  sanitizeInput(Phone);
-  sanitizeInput(SubjectInput);
-  sanitizeInput(MessageInput);
-  showError(Name);
-  showError(EmailInput);
-  showError(Phone);
-  showError(SubjectInput);
-  showError(MessageInput);
-  validateLength(Name, 50);
-  validateLength(EmailInput, 100);
-  validateLength(Phone, 15);
-  validateLength(SubjectInput, 100);
-  validateLength(MessageInput, 500);
-
-  // Jika ada input yang kosong
-  if (Name.value.trim() === "" || EmailInput.value.trim() === "" || Phone.value.trim() === "" ||
-      SubjectInput.value.trim() === "" || MessageInput.value.trim() === "") {
-    isValid = false;
-  }
-  return isValid;
-}
-
-// Fungsi untuk mengirim email melalui EmailJS
-function sendEmail() {
-  const templateParams = {
-    from_name: Name.value,
-    email: EmailInput.value,
-    phone: Phone.value,
-    subject: SubjectInput.value,
-    message: MessageInput.value
-  };
-  emailjs
-  .send('service_a2y6g0i', 'template_lwy60kv', templateParams)
-  .then(function(response) {
-    Swal.fire({
-      icon: 'success',
-      title: 'Pesan Berhasil Dikirim!',
-      text: 'Terima kasih sudah menghubungi Ricky. Tunggu Saya akan segera membalasnya. Anda sungguh luar biasa..!',
-      showConfirmButton: true,
-      confirmButtonText: 'OK'
-    }).then(() => {
-      form.reset();
-    });
-  })
-  .catch(function(error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Pengiriman Gagal!',
-      text: 'Ada masalah, mohon coba lagi nanti. Terimakasih',
-    });
-  });
-}
-// jalankan tombol submit
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (validateForm()) {
-    sendEmail();
-  }
-});
-
-/*========== contact setup end ========== */
-
 function checkAnswer(button, answer) {
             const correctAnswer = 'object';
             const feedback = document.getElementById('feedback');
@@ -358,6 +235,8 @@ mySkills.forEach(ms => {
 });
 
 import { ambilData } from "./scriptServices.js";
+import { dataTestimoni } from "./scriptTestimonial.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   const servicesContainer = document.getElementById("servicesContainer");
   
@@ -378,4 +257,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  const cardT = document.getElementById('cardT');
+  dataTestimoni('../data/testimoniData.json')
+    .then(data => {
+      data.forEach(dt => {
+        let testimonial = document.createElement("div")
+        testimonial.className = "testimonial-slide swiper-slide"
+        cardT.appendChild(testimonial);
+
+        let image = document.createElement("img");
+        image.src = dt["gambar"];
+        image.src = dt["name"];
+        testimonial.appendChild(image);
+
+        let nama = document.createElement('h3')
+        nama.innerHTML = dt['name'];
+        testimonial.appendChild(nama);
+
+        let testimoni = document.createElement('p');
+        testimoni.innerHTML = dt['testi'];
+        testimonial.appendChild(testimoni);
+      })
+    })
+    .catch(error => {
+      console.error("gagal muat data");
+  })
+
 })
