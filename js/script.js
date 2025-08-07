@@ -127,9 +127,9 @@ let portfolio = [
   },
   {
     "gambar": "images/project6.png",
-    "nama": "Lorem ipsum ",
-    "description": "Lorem ipsum dolor sit amet.",
-    "link":"#"
+    "nama": "Simple Store Website",
+    "description": "first project using javascript",
+    "link":"https://ricky-hrf.github.io/rcStore.github.io/"
   }
 ];
 
@@ -200,6 +200,7 @@ portfolio.forEach(porto => {
   let anchor = document.createElement("a");
   anchor.href = porto["link"];
   anchor.title = porto["nama"];
+  anchor.setAttribute("target", "_blank");
   divBaru.appendChild(anchor);
   let icon = document.createElement("i");
   icon.className = "bx bx-link-external";
@@ -234,14 +235,28 @@ mySkills.forEach(ms => {
   divPertama.appendChild(anakDivKedua);
 });
 
-import { ambilData } from "./scriptServices.js";
+let services = [
+  {
+    "service": "We Development",
+    "desc":"Siap memiliki website yang menarik dan fungsional? Kami hadir untuk membantu Anda menciptakan website profesional yang tidak hanya tampil hebat, tetapi juga meningkatkan bisnis Anda! Ayo, bangun website impian Anda bersama kami!",
+    "icon":"bx bx-code-alt"
+  },
+  {
+    "service": "Desktop App Development",
+    "desc": "Ingin brand Anda tampil beda dan menarik perhatian? Percayakan kepada kami untuk menciptakan aplikasi desktop yang inovatif dan fungsional, yang akan membawa pengalaman pengguna Anda ke tingkat berikutnya. Mari wujudkan ide-ide kreatif Anda!",
+    "icon":"bx bxs-paint"
+  },
+  {
+    "service":"Data Analysis",
+    "desc":"Raih lebih banyak pelanggan dan tingkatkan penjualan dengan strategi analisis data kami! Kami siap mengoptimalkan kehadiran online Anda dan menjangkau audiens lebih luas. Hubungi kami sekarang untuk mulai mendominasi dunia digital!",
+    "icon":"bx bx-bar-chart"
+  }
+]
 import { dataTestimoni } from "./scriptTestimonial.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const servicesContainer = document.getElementById("servicesContainer");
-  
-  ambilData(function (data) {
-    data.forEach(item => {
+  services.forEach(item => {
       const servicesBox = document.createElement("div");
       servicesBox.className = "services-box";
       const icon = document.createElement("i");
@@ -255,32 +270,41 @@ document.addEventListener("DOMContentLoaded", function () {
       servicesBox.appendChild(p);
       servicesContainer.appendChild(servicesBox);
     });
-  });
   
+  let test = [
+  {
+    "gambar":"images/baby.jpg",
+    "name": "Baby Boy 02",
+    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+  },
+  {
+    "gambar":"images/baby2.png",
+    "name": "Suka pertama",
+    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+  },
+  {
+    "gambar":"images/baby3.png",
+    "name": "Baby Boy 01",
+    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+  }
+]
   const cardT = document.getElementById('cardT');
-  dataTestimoni('../data/testimoniData.json')
-    .then(data => {
-      data.forEach(dt => {
-        let testimonial = document.createElement("div")
-        testimonial.className = "testimonial-slide swiper-slide"
-        cardT.appendChild(testimonial);
+  test.forEach(dt => {
+    let testimonial = document.createElement("div")
+    testimonial.className = "testimonial-slide swiper-slide"
+    cardT.appendChild(testimonial);
 
-        let image = document.createElement("img");
-        image.src = dt["gambar"];
-        image.src = dt["name"];
-        testimonial.appendChild(image);
+    let image = document.createElement("img");
+    image.src = dt["gambar"];
+    image.src = dt["name"];
+    testimonial.appendChild(image);
 
-        let nama = document.createElement('h3')
-        nama.innerHTML = dt['name'];
-        testimonial.appendChild(nama);
+    let nama = document.createElement('h3')
+    nama.innerHTML = dt['name'];
+    testimonial.appendChild(nama);
 
-        let testimoni = document.createElement('p');
-        testimoni.innerHTML = dt['testi'];
-        testimonial.appendChild(testimoni);
+    let testimoni = document.createElement('p');
+    testimoni.innerHTML = dt['testi'];
+    testimonial.appendChild(testimoni);
       })
-    })
-    .catch(error => {
-      console.error("gagal muat data");
   })
-
-})
