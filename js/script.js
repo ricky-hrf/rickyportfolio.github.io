@@ -104,8 +104,8 @@ let portfolio = [
   {
     "gambar": "images/project2.png",
     "nama": "Design Web",
-    "description": "Aplikasi quis sederhana",
-    "link":"#"
+    "description": "Website Perusahaan",
+    "link":"https://companyprofile-chi.vercel.app/"
   },
   {
     "gambar": "images/project3.png",
