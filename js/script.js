@@ -102,7 +102,7 @@ let portfolio = [
     "link": "https://ricky-hrf.github.io/rcCoffeeshop.io/"
   },
   {
-    "gambar": "images/project2.png",
+    "gambar": "images/project2.jpg",
     "nama": "Design Web",
     "description": "Website Perusahaan",
     "link":"https://companyprofile-chi.vercel.app/"
