@@ -20,7 +20,7 @@ window.addEventListener('scroll', function () {
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () =>{
+menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
 };
@@ -30,29 +30,29 @@ menuIcon.onclick = () =>{
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-window.onscroll = () =>{
-  sections.forEach(sec =>{
+window.onscroll = () => {
+  sections.forEach(sec => {
     let top = window.scrollY;
     let offset = sec.offsetTop - 150;
     let height = sec.offsetHeight;
     let id = sec.getAttribute('id');
 
-    if(top >= offset && top < offset + height){
+    if (top >= offset && top < offset + height) {
       navLinks.forEach(links => {
         links.classList.remove('active');
-        document.querySelector('header nav a[href*='+ id + ']').classList.add('active');
+        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
       });
     };
   });
 
-/*============ sicky navbar ============*/  
-let header = document.querySelector('.header');
+  /*============ sicky navbar ============*/
+  let header = document.querySelector('.header');
 
-header.classList.toggle('sticky', window.scrollY > 100);
+  header.classList.toggle('sticky', window.scrollY > 100);
 
-/*============ remove menu icon navbar when click navbar link (scroll)============*/ 
-menuIcon.classList.remove('bx-x');
-navbar.classList.remove('active');
+  /*============ remove menu icon navbar when click navbar link (scroll)============*/
+  menuIcon.classList.remove('bx-x');
+  navbar.classList.remove('active');
 
 };
 
@@ -81,25 +81,25 @@ darkModeIcon.onclick = () => {
 /*============ dark light mode end ============*/
 
 function checkAnswer(button, answer) {
-            const correctAnswer = 'object';
-            const feedback = document.getElementById('feedback');
+  const correctAnswer = 'object';
+  const feedback = document.getElementById('feedback');
 
-            if (answer === correctAnswer) {
-                feedback.textContent = 'Jawaban benar!';
-                feedback.classList.add('text-green-600');
-                feedback.classList.remove('text-red-600');
-            } else {
-                feedback.textContent = 'Jawaban salah, coba lagi!';
-                feedback.classList.add('text-red-600');
-                feedback.classList.remove('text-green-600');
-            }
-        }
+  if (answer === correctAnswer) {
+    feedback.textContent = 'Jawaban benar!';
+    feedback.classList.add('text-green-600');
+    feedback.classList.remove('text-red-600');
+  } else {
+    feedback.textContent = 'Jawaban salah, coba lagi!';
+    feedback.classList.add('text-red-600');
+    feedback.classList.remove('text-green-600');
+  }
+}
 let portfolio = [
   {
     "gambar": "images/project2.png",
     "nama": "Design Web",
     "description": "Website Perusahaan",
-    "link":"https://companyprofile-chi.vercel.app/"
+    "link": "https://companyprofile-chi.vercel.app/"
   },
   {
     "gambar": "images/project1.png",
@@ -109,27 +109,27 @@ let portfolio = [
   },
   {
     "gambar": "images/project3.png",
-    "nama": "lorem ipsum",
-    "description": "Lorem ipsum dolor sit amet.",
-    "link":"#"
+    "nama": "School Website",
+    "description": "Template sistem informasi sekolah",
+    "link": "https://myschool-website-psi.vercel.app/"
   },
   {
     "gambar": "images/project4.png",
     "nama": "lorem ipsum",
     "description": "Lorem ipsum dolor sit amet.",
-    "link":"#"
+    "link": "#"
   },
   {
     "gambar": "images/project5.png",
     "nama": "Lorem ipsum ",
     "description": "Lorem ipsum dolor sit amet.",
-    "link":"#"
+    "link": "#"
   },
   {
     "gambar": "images/project6.png",
     "nama": "Simple Store Website",
     "description": "first project using javascript",
-    "link":"https://ricky-hrf.github.io/rcStore.github.io/"
+    "link": "https://ricky-hrf.github.io/rcStore.github.io/"
   }
 ];
 
@@ -238,18 +238,18 @@ mySkills.forEach(ms => {
 let services = [
   {
     "service": "We Development",
-    "desc":"Siap memiliki website yang menarik dan fungsional? Kami hadir untuk membantu Anda menciptakan website profesional yang tidak hanya tampil hebat, tetapi juga meningkatkan bisnis Anda! Ayo, bangun website impian Anda bersama kami!",
-    "icon":"bx bx-code-alt"
+    "desc": "Siap memiliki website yang menarik dan fungsional? Kami hadir untuk membantu Anda menciptakan website profesional yang tidak hanya tampil hebat, tetapi juga meningkatkan bisnis Anda! Ayo, bangun website impian Anda bersama kami!",
+    "icon": "bx bx-code-alt"
   },
   {
     "service": "Desktop App Development",
     "desc": "Ingin brand Anda tampil beda dan menarik perhatian? Percayakan kepada kami untuk menciptakan aplikasi desktop yang inovatif dan fungsional, yang akan membawa pengalaman pengguna Anda ke tingkat berikutnya. Mari wujudkan ide-ide kreatif Anda!",
-    "icon":"bx bxs-paint"
+    "icon": "bx bxs-paint"
   },
   {
-    "service":"Data Analysis",
-    "desc":"Raih lebih banyak pelanggan dan tingkatkan penjualan dengan strategi analisis data kami! Kami siap mengoptimalkan kehadiran online Anda dan menjangkau audiens lebih luas. Hubungi kami sekarang untuk mulai mendominasi dunia digital!",
-    "icon":"bx bx-bar-chart"
+    "service": "Data Analysis",
+    "desc": "Raih lebih banyak pelanggan dan tingkatkan penjualan dengan strategi analisis data kami! Kami siap mengoptimalkan kehadiran online Anda dan menjangkau audiens lebih luas. Hubungi kami sekarang untuk mulai mendominasi dunia digital!",
+    "icon": "bx bx-bar-chart"
   }
 ]
 import { dataTestimoni } from "./scriptTestimonial.js";
@@ -257,37 +257,37 @@ import { dataTestimoni } from "./scriptTestimonial.js";
 document.addEventListener("DOMContentLoaded", function () {
   const servicesContainer = document.getElementById("servicesContainer");
   services.forEach(item => {
-      const servicesBox = document.createElement("div");
-      servicesBox.className = "services-box";
-      const icon = document.createElement("i");
-      icon.className = item['icon'];
-      servicesBox.appendChild(icon);
-      const service = document.createElement("h3");
-      service.textContent = item["service"];
-      servicesBox.appendChild(service);
-      const p = document.createElement("p");
-      p.textContent = item["desc"];
-      servicesBox.appendChild(p);
-      servicesContainer.appendChild(servicesBox);
-    });
-  
+    const servicesBox = document.createElement("div");
+    servicesBox.className = "services-box";
+    const icon = document.createElement("i");
+    icon.className = item['icon'];
+    servicesBox.appendChild(icon);
+    const service = document.createElement("h3");
+    service.textContent = item["service"];
+    servicesBox.appendChild(service);
+    const p = document.createElement("p");
+    p.textContent = item["desc"];
+    servicesBox.appendChild(p);
+    servicesContainer.appendChild(servicesBox);
+  });
+
   let test = [
-  {
-    "gambar":"images/baby.jpg",
-    "name": "Baby Boy 02",
-    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
-  },
-  {
-    "gambar":"images/baby2.png",
-    "name": "Suka pertama",
-    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
-  },
-  {
-    "gambar":"images/baby3.png",
-    "name": "Baby Boy 01",
-    "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
-  }
-]
+    {
+      "gambar": "images/baby.jpg",
+      "name": "Baby Boy 02",
+      "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+    },
+    {
+      "gambar": "images/baby2.png",
+      "name": "Suka pertama",
+      "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+    },
+    {
+      "gambar": "images/baby3.png",
+      "name": "Baby Boy 01",
+      "testi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ducimus illo sapiente eos. Impedit quisquam, quasi velit ametdeserunt, officiis ipsa cupiditate, omnis magni fugiat quis. Ut earum, iure distinctio velit doloremque ratione facilis soluta unde voluptas. Amet maiores natus architecto facere, molestias repellat quibusdam iusto, inventore fugiat dolorem dicta mollitia vel incidunt est officiis distinctio voluptate excepturi, quaerat dolores."
+    }
+  ]
   const cardT = document.getElementById('cardT');
   test.forEach(dt => {
     let testimonial = document.createElement("div")
@@ -306,5 +306,5 @@ document.addEventListener("DOMContentLoaded", function () {
     let testimoni = document.createElement('p');
     testimoni.innerHTML = dt['testi'];
     testimonial.appendChild(testimoni);
-      })
   })
+})
